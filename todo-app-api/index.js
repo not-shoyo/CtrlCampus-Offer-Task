@@ -109,11 +109,6 @@ app.delete("/api/tasks/:id", (req, res) => {
         );
 
     task.delete();
-
-    task
-      .save()
-      .then((task) => res.send(task))
-      .catch((err) => console.log(err));
   });
 });
 
