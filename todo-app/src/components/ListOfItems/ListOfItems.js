@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import ListItem from "./ListItem/ListItem";
 
+import "./ListOfItems.css";
+
 class ListOfItems extends Component {
   createList = (list) => {
     return list.map((item) => (
@@ -15,7 +17,11 @@ class ListOfItems extends Component {
   };
 
   render() {
-    return <ul>{this.createList(this.props.list)}</ul>;
+    return (
+      <ul className="list-of-items list-group list-group-flush">
+        {this.createList(this.props.list)}
+      </ul>
+    );
   }
 }
 

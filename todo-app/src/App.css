@@ -1,0 +1,36 @@
+.outer-container {
+  height: 100%;
+  width: 100%;
+  background-color: #ff9268;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  height: 60%;
+  width: 40%;
+
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fcfcfc;
+  border-radius: 12px;
+  position: relative;
+}
+
+.heading {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.interactive-region {
+  height: 70%;
+  margin: 40px 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

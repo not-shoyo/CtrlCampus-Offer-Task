@@ -1,0 +1,9 @@
+.list-of-items {
+  list-style-type: none;
+  overflow-y: scroll;
+  animation-timing-function: linear;
+}
+
+.list-of-items::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,32 @@
+.task-in-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-checkbox {
+  display: none;
+}
+
+/* .task-in-list * {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-delay: 2s;
+} */
+
+.done-item * {
+  text-decoration: line-through;
+  color: #939293;
+}
+
+.tick-icon {
+  font-size: 17px;
+  width: 22px;
+  border: none;
+  background: none;
+  display: none;
+}
+
+.tick-icon.done-item {
+  display: inline;
+}

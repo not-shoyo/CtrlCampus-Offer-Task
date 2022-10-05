@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import InputField from "./components/InputField/InputField";
 import ListOfItems from "./components/ListOfItems/ListOfItems";
 
+import "./App.css";
+
 class App extends Component {
   state = { list: [] };
 
@@ -122,15 +124,26 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Hello World!</h1>
-        <form action="/" onSubmit={(e) => this.handleSubmit(e)}>
-          <ListOfItems list={this.state.list} handleCheck={this.handleCheck} />
-          <InputField
-            onAddClick={this.addItemToList}
-            onTickClick={this.handleTick}
-            onCrossClick={this.handleCross}
-          />
-        </form>
+        <div className="outer-container">
+          <div className="card-container">
+            <h1 className="heading">Todos</h1>
+            <form
+              className="interactive-region"
+              action="/"
+              onSubmit={(e) => this.handleSubmit(e)}>
+              <ListOfItems
+                list={this.state.list}
+                handleCheck={this.handleCheck}
+              />
+              <br />
+              <InputField
+                onAddClick={this.addItemToList}
+                onTickClick={this.handleTick}
+                onCrossClick={this.handleCross}
+              />
+            </form>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
