@@ -12,8 +12,11 @@ app.use(cors());
 
 app.use("/testAPI", testAPIRouter);
 
+const PORT = process.env.PORT || 5000;
+
 const dbURI =
-  "mongodb+srv://admin-user:abcd123@ctrlcampustaskcluster.td6xqzf.mongodb.net/CtrlCampusTask?retryWrites=true&w=majority";
+  "mongodb+srv://first-user:8zWbTYU46p0VvScN@ctrlcampustaskcluster.j6nzifg.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
@@ -26,10 +29,9 @@ mongoose
     });
   })
   .catch((err) => {
+    console.log("weeeee have an errorrrrrr");
     console.log(err);
   });
-
-const PORT = process.env.PORT || 5000;
 
 // let tasks = [
 //   { title: "learnreact", done: false, selected: false },
